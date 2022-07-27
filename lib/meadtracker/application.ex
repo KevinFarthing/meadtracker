@@ -11,9 +11,10 @@ defmodule Meadtracker.Application do
       # Start the Ecto repository
       Meadtracker.Repo,
       # Start the endpoint when the application starts
-      MeadtrackerWeb.Endpoint
+      MeadtrackerWeb.Endpoint,
       # Starts a worker by calling: Meadtracker.Worker.start_link(arg)
       # {Meadtracker.Worker, arg},
+      {Phoenix.PubSub, [name: Meadtracker.PubSub, adapter: Phoenix.PubSub.PG2]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -1,7 +1,7 @@
-defmodule MeadTracker.Batches do
+defmodule Meadtracker.Batches do
   import Ecto.Query
-  alias MeadTracker.Batches.{Batch, Note}
-  alias MeadTracker.Repo
+  alias Meadtracker.Batches.{Batch, Note}
+  alias Meadtracker.Repo
 
   def batches_with_description do
     batches =
@@ -20,7 +20,7 @@ defmodule MeadTracker.Batches do
     batch =
       Batch
       |> preload(:notes)
-      |> Repo.get_by(id)
+      |> Repo.get_by(id: id)
 
     {:ok, batch}
   end

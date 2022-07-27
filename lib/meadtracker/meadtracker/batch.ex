@@ -1,5 +1,5 @@
-defmodule MeadTracker.Batches.Batch do
-  alias MeadTracker.Batches.Note
+defmodule Meadtracker.Batches.Batch do
+  alias Meadtracker.Batches.Note
   use Ecto.Schema
 
   @type t :: %__MODULE__{

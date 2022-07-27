@@ -15,7 +15,8 @@ config :meadtracker, MeadtrackerWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "iuDWLVVhCRqGiU0ypmVoTE7LNdToqFkAcy2KX3tHPbAesUQzQDVwB+DkJgt2cQ8X",
   render_errors: [view: MeadtrackerWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Meadtracker.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Meadtracker.PubSub
+  # pubsub: [name: Meadtracker.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
