@@ -19,6 +19,11 @@ defmodule MeadtrackerWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/app", MeadtrackerWeb do
+    get "/", WebappController, :index
+    get "/*path", WebappController, :index
+  end
+
   # Other scopes may use custom stacks.
   scope "/api", MeadtrackerWeb do
     pipe_through :api

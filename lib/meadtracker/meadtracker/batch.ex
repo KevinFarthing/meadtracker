@@ -20,7 +20,7 @@ defmodule MeadTracker.Batches.Batch do
     field :target_abv, :float
     field :original_gravity, :float
     field :final_gravity, :float
-    field :pitch_date, :datetime
+    field :pitch_date, :utc_datetime
     has_many :notes, Note
   end
 end

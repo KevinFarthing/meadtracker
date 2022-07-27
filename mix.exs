@@ -7,7 +7,8 @@ defmodule Meadtracker.MixProject do
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      compilers: [:phoenix] ++ Mix.compilers(),
+      # compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps()
@@ -20,6 +21,18 @@ defmodule Meadtracker.MixProject do
   def application do
     [
       mod: {Meadtracker.Application, []},
+      # applications: [
+      #   :phoenix,
+      #   :phoenix_pubsub,
+      #   :phoenix_ecto,
+      #   :ecto_sql,
+      #   :postgrex,
+      #   :phoenix_html,
+      #   :phoenix_live_reload,
+      #   :gettext,
+      #   :jason,
+      #   :plug_cowboy,
+      # ],
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -33,8 +46,8 @@ defmodule Meadtracker.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.0"},
-      {:phoenix_pubsub, "~> 1.1"},
+      {:phoenix, "~> 1.0"},
+      {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_ecto, "~> 4.0"},
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0"},

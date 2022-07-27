@@ -7,9 +7,9 @@ defmodule MeadTracker.Batches do
     batches =
       Batch
       |> select([b], %{
-        id: id,
-        name: name,
-        description: description
+        id: b.id,
+        name: b.name,
+        description: b.description
       })
       |> Repo.all()
 

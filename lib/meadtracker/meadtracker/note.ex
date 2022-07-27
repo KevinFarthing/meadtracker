@@ -9,7 +9,7 @@ defmodule MeadTracker.Batches.Note do
 
   schema "notes" do
     field :note, :string
-    field :date, :datetime
+    field :date, :utc_datetime
     belongs_to :batch, Batch
   end
 end
