@@ -1,4 +1,7 @@
 defmodule Mix.Tasks.Webapp do
+  @moduledoc """
+  mix webapp
+  """
   use Mix.Task
   require Logger
   @public_path "./priv/static/webapp"

@@ -5,7 +5,8 @@
 # is restricted to this project.
 
 # General application configuration
-use Mix.Config
+# use Mix.Config
+import Config
 
 config :meadtracker,
   ecto_repos: [Meadtracker.Repo]
@@ -16,7 +17,8 @@ config :meadtracker, MeadtrackerWeb.Endpoint,
   secret_key_base: "iuDWLVVhCRqGiU0ypmVoTE7LNdToqFkAcy2KX3tHPbAesUQzQDVwB+DkJgt2cQ8X",
   render_errors: [view: MeadtrackerWeb.ErrorView, accepts: ~w(html json)],
   pubsub_server: Meadtracker.PubSub
-  # pubsub: [name: Meadtracker.PubSub, adapter: Phoenix.PubSub.PG2]
+
+# pubsub: [name: Meadtracker.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
