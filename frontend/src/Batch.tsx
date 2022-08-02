@@ -50,27 +50,31 @@ const Batch = () => {
                   <Row>
                     <Col>Batch Started On: {batch.pitch_date.slice(0, 10)}</Col>
                   </Row>
-                  <Row>
-                    <Col>
-                      <Table size="sm">
-                        <thead>
-                          <tr>
-                            <th>Date</th>
-                            <th>Note</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {batch.notes.map((note: any) => (
-                            // <p>{note.note}</p>
+                  {batch.notes.length > 0 ? (
+                    <Row>
+                      <Col>
+                        <Table size="sm">
+                          <thead>
                             <tr>
-                              <td>{note.date.slice(0, 10)}</td>
-                              <td>{note.note}</td>
+                              <th>Date</th>
+                              <th>Note</th>
                             </tr>
-                          ))}
-                        </tbody>
-                      </Table>
-                    </Col>
-                  </Row>
+                          </thead>
+                          <tbody>
+                            {batch.notes.map((note: any) => (
+                              // <p>{note.note}</p>
+                              <tr>
+                                <td>{note.date.slice(0, 10)}</td>
+                                <td>{note.note}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </Table>
+                      </Col>
+                    </Row>
+                  ) : (
+                    <Row></Row>
+                  )}
                 </Container>
               </Card.Text>
               <Card.Link href="/app">Back to batch index</Card.Link>
