@@ -11,7 +11,7 @@ defmodule Meadtracker.Batches do
         name: b.name,
         description: b.description
       })
-      |> order_by([b], [asc: b.id])
+      |> order_by([b], asc: b.id)
       |> Repo.all()
 
     {:ok, batches}
@@ -20,10 +20,13 @@ defmodule Meadtracker.Batches do
   def batch_with_notes(id) do
     batch =
       Batch
-      |> preload(notes: ^from(
-        Note
-        |> order_by([n], asc: n.id)
-      ))
+      |> preload(
+        notes:
+          ^from(
+            Note
+            |> order_by([n], asc: n.id)
+          )
+      )
       |> Repo.get_by(id: id)
 
     {:ok, batch}
