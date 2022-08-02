@@ -2,7 +2,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "webpack --mode production",
+    "deploy": "cd .. && mix webapp",
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
