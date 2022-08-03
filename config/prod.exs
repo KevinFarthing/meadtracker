@@ -69,3 +69,11 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs which should be versioned
 # separately.
 # import_config "prod.secret.exs"
+
+config :meadtracker, Meadtracker.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "",
+  url: System.get_env("DATABASE_URL"),
+  # url: "${DATABASE_URL}",
+  # ssl: true,
+  pool_size: 2
