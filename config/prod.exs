@@ -75,5 +75,5 @@ config :meadtracker, Meadtracker.Repo,
   database: "",
   url: System.get_env("DATABASE_URL"),
   # url: "${DATABASE_URL}",
-  # ssl: true,
+  ssl: true,
   pool_size: 2
