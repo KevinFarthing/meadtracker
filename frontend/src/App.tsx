@@ -10,14 +10,15 @@ import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 const style = {}
 
 function App() {
-  useEffect(() => {
-    if (window.location.pathname === '/') {
-      window.location.replace('/app');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.location.pathname === '/') {
+  //     window.location.replace('/app');
+  //   }
+  // }, []);
 
   return (
-    <BrowserRouter basename="app">
+    // <BrowserRouter basename="app">
+    <BrowserRouter>
       {/* <nav style={style}>
         <Link to="/">All Batches</Link>
         <Link to="/batch">Batch Page</Link><br/>

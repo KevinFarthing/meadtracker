@@ -13,17 +13,6 @@ defmodule MeadtrackerWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", MeadtrackerWeb do
-    pipe_through :browser
-
-    get "/", PageController, :index
-  end
-
-  scope "/app", MeadtrackerWeb do
-    get "/", WebappController, :index
-    get "/*path", WebappController, :index
-  end
-
   # Other scopes may use custom stacks.
   scope "/api", MeadtrackerWeb do
     pipe_through :api
@@ -31,4 +20,18 @@ defmodule MeadtrackerWeb.Router do
     get "/batches", BatchController, :index
     get "/batches/:id", BatchController, :show
   end
+
+  scope "/", MeadtrackerWeb do
+    # pipe_through :browser
+
+    # get "/", PageController, :index
+
+    get "/", WebappController, :index
+    get "/*path", WebappController, :index
+  end
+
+  # scope "/batch", MeadtrackerWeb do
+  #   get "/", WebappController, :index
+  #   get "/*path", WebappController, :index
+  # end
 end

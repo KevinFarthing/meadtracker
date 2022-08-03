@@ -38,7 +38,9 @@ const Batch = () => {
               <Card.Text>
                 <Container>
                   <Row>
-                    <Col>{batch.recipe}</Col>
+                    <Col>
+                    <div dangerouslySetInnerHTML={{ __html: batch.recipe }}/>
+                    </Col>
                   </Row>
                   <Row>
                     <Col>Target ABV: {batch.target_abv}</Col>
@@ -77,7 +79,7 @@ const Batch = () => {
                   )}
                 </Container>
               </Card.Text>
-              <Card.Link href="/app">Back to batch index</Card.Link>
+              <Card.Link href="/">Back to batch index</Card.Link>
             </Card.Body>
           ) : (
             <p>loading</p>
