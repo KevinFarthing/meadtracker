@@ -65,7 +65,7 @@ sna = "https:\/\/www.reddit.com\/r\/mead\/wiki\/process\/staggered_nutrient_addi
             recipe: "10 lbs spelt malt, 6 lbs honey, 3 bottles of date syrup. Additionally cumin, coriander, and pistachio. No nutrition, leaving it to the spelt. Collaboration with cool people from Forteza.",
             name: "Sekhmet",
             description: "Attempt to recreate recipe from analysis of egyptian artifacts",
-            target_abv: 10,
+            target_abv: 10.0,
             original_gravity: 1.075,
             final_gravity: nil,
             pitch_date: "2022-08-27T05:00:00.000Z" |> Seed.create_datetime_from_string,
